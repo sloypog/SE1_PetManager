@@ -28,11 +28,7 @@ public class Pet implements ActiveRecord {
 		return 5;
 	}
 	
-	public Boolean equals(Pet otherPet) {
-			return birthday.equals(otherPet.birthday) &&
-			name.equals(otherPet.name) && breed.equals(otherPet.breed);
-
-	}
+	
 	public Pet(ResultSet row) throws SQLException {
 		this(row.getString("name"), row.getString("breed"));
 		this.id = row.getInt("id");
