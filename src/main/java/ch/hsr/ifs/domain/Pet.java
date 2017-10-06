@@ -34,6 +34,11 @@ public class Pet implements ActiveRecord {
 		this.ownerID = row.getInt("owner");
 	}
 	
+	public Boolean equals(Pet otherPet) {
+		return name.equals(otherPet.name) &&
+				birthday.equals(otherPet.birthday) && breed.equals(otherPet.breed);
+	}
+	
 	public void setOwner(Person owner) {
 		this.owner = owner;
 		ownerID = owner.getID();
