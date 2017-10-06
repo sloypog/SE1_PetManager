@@ -36,8 +36,8 @@ public class Pet implements ActiveRecord {
 	}
 	
 	public Boolean equals(Pet otherPet) {
-		return name.equals(otherPet.name) &&
-				birthday.equals(otherPet.birthday) && breed.equals(otherPet.breed);
+		return 
+				birthday.equals(otherPet.birthday) && breed.equals(otherPet.breed) && name.equals(otherPet.name) ;
 	}
 	
 	public void setOwner(Person owner) {
